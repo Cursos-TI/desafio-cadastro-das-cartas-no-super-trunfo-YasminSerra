@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
+// Tema 2 - Calculando Densidade Populacional e PIB per Capita.
 
  /*
-    Programa: Cartas de cidades do Brasil
+    Programa: Inserindo densidade populacional e PIB per Capita.
    Elaborado por: Yasmin Serra
-   Descrição: Este programa exibe informações sobre duas cidades brasileiras,
-   incluindo estado, código, população, área, PIB e pontos turísticos.
+    O programa permite o cadastro de informações de duas cidades e realiza cálculos de densidade populacional e PIB per capita, exibindo os resultados de forma organizada e formatada.
     */
 
 int main() {
@@ -20,6 +19,8 @@ int main() {
     float area1; 
     float pib1;  
     int pturisticos1;  
+    float densidade1;
+    float pibper1;
 
     //Definição dos dados sobre a segunda cidade:
     char estado2[30]; 
@@ -29,6 +30,9 @@ int main() {
     float area2; 
     float pib2;  
     int pturisticos2;  
+    float densidade2;
+    float pibper2;
+
 
 
     // Cadastro de informacaoes da primeria Carta:
@@ -68,6 +72,12 @@ int main() {
     printf("Digite o número de Pontos Turísticos: \n");
     scanf("%d",&pturisticos2 );
 
+    densidade1 = (float) populacao1 / area1;    // Inserção de novas funções
+    densidade2 = (float) populacao2 / area2;    // Inserção de novas funções
+
+    pibper1 = (float) pib1 /populacao1 ;
+    pibper2 = (float)pib2 / populacao2 ;
+
 
     // Exibição dos Dados da primeira Carta:
     printf("\n Carta 1\n");
@@ -78,6 +88,8 @@ int main() {
     printf("Área: %f km²\n",  area1);
     printf("PIB: %f em bilhões\n",  pib1);
     printf("Número de Pontos Turísticos: %d\n", pturisticos1);
+    printf("Densidade populacional: %.2f \n", densidade1);  //Exibição de novos dados
+    printf("PIB per capita: %.2f\n", pibper1); //Exibição de novos dados
 
     printf("\n------------------------------------------\n"); //linha de separação entre cartas.
 
@@ -91,6 +103,8 @@ int main() {
     printf("Área: %f km²\n",  area2);
     printf("PIB: %f em bilhões\n",  pib2);
     printf("Número de Pontos Turísticos: %d\n", pturisticos2);
+    printf("Densidade populacional: %.2f \n", densidade2); //Exibição de novos dados
+    printf("PIB per capita: %.2f\n", pibper2); //Exibição de novos dados
 
     return 0;
 
